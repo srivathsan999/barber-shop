@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Dashboard - Book appointments and manage your grooming profile.">
+    <title>Dashboard | Barber Shop</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <style>
+        .dashboard-container {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        .user-stats-card {
+            background: var(--surface);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .user-stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .booking-form-container {
+            background: var(--surface);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .appointment-item {
+            border-left: 4px solid var(--accent);
+            background: var(--background);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .status-upcoming {
+            background: rgba(193, 154, 107, 0.2);
+            color: var(--accent);
+        }
+
+        .status-completed {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .time-slot {
+            cursor: pointer;
+            border: 1px solid var(--glass-border);
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .time-slot:hover,
+        .time-slot.selected {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            margin-bottom: 5px;
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: var(--accent);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ms-lg-4">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-primary"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=C19A6B&color=fff"
+                                alt="Avatar" class="rounded-circle me-2" width="32" height="32">
+                            <span class="d-none d-sm-inline">John Doe</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-cog me-2"></i> Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="login.html"><i
+                                        class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container dashboard-container">
+        <div class="row g-4">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="sidebar d-none d-lg-block">
+                    <a href="#" class="sidebar-link active"><i class="fas fa-calendar-check"></i> Appointments</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-history"></i> My History</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-gift"></i> Loyalty Rewards</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-user"></i> Profile Settings</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <!-- Welcome & Stats -->
+                <div class="row g-3 mb-5">
+                    <div class="col-12 fade-up">
+                        <h2 class="mb-4">HELLO, <span class="text-accent">JOHN</span></h2>
+                    </div>
+                    <div class="col-md-4 fade-up">
+                        <div class="user-stats-card">
+                            <i class="fas fa-scissors text-accent mb-3 fa-2x"></i>
+                            <h3 class="h2 mb-0">12</h3>
+                            <p class="text-muted small mb-0">TOTAL VISITS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="animation-delay: 0.1s">
+                        <div class="user-stats-card">
+                            <i class="fas fa-star text-accent mb-3 fa-2x"></i>
+                            <h3 class="h2 mb-0">450</h3>
+                            <p class="text-muted small mb-0">LOYALTY POINTS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-up" style="animation-delay: 0.2s">
+                        <div class="user-stats-card">
+                            <i class="fas fa-calendar-alt text-accent mb-3 fa-2x"></i>
+                            <h3 class="h2 mb-0">1</h3>
+                            <p class="text-muted small mb-0">UPCOMING VISIT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Booking Form -->
+                    <div class="col-lg-7 fade-up" style="animation-delay: 0.3s">
+                        <div class="booking-form-container">
+                            <h4 class="mb-4">BOOK NEW APPOINTMENT</h4>
+                            <form id="booking-form">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">SELECT SERVICE</label>
+                                    <select class="form-select p-3">
+                                        <option value="haircut">Classic Haircut - $35</option>
+                                        <option value="beard">Beard Sculpting - $25</option>
+                                        <option value="shave">Royal Shave - $40</option>
+                                        <option value="combo">The Works (Cut + Shave) - $65</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small fw-bold">SELECT DATE</label>
+                                    <input type="date" class="form-control p-3">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label small fw-bold mb-3">SELECT TIME</label>
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <div class="time-slot">09:00 AM</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="time-slot">10:30 AM</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="time-slot active">12:00 PM</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="time-slot">02:30 PM</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="time-slot">04:00 PM</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="time-slot">05:30 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3">CONFIRM BOOKING</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- My Bookings -->
+                    <div class="col-lg-5 fade-up" style="animation-delay: 0.4s">
+                        <h4 class="mb-4">MY UPCOMING APPOINTMENTS</h4>
+                        <div class="appointment-item">
+                            <div>
+                                <h6 class="mb-1">Classic Haircut</h6>
+                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Oct 24, 2024
+                                </p>
+                                <p class="small text-muted mb-0"><i class="far fa-clock me-1"></i> 11:30 AM</p>
+                            </div>
+                            <span class="status-badge status-upcoming">Upcoming</span>
+                        </div>
+
+                        <h4 class="mb-4 mt-5">PAST VISITS</h4>
+                        <div class="appointment-item opacity-75">
+                            <div>
+                                <h6 class="mb-1">Beard Sculpting</h6>
+                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Sep 12, 2024
+                                </p>
+                            </div>
+                            <span class="status-badge status-completed">Completed</span>
+                        </div>
+                        <div class="appointment-item opacity-75">
+                            <div>
+                                <h6 class="mb-1">Classic Haircut</h6>
+                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Aug 05, 2024
+                                </p>
+                            </div>
+                            <span class="status-badge status-completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Standardized) -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
+                    <p class="text-muted">Premium grooming for the modern gentleman. Visit us for an experience, not
+                        just a haircut.</p>
+                    <div class="mt-4">
+                        <a href="#" class="d-inline-block me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="d-inline-block me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="d-inline-block"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Services</h5>
+                    <a href="services.html">Haircuts</a>
+                    <a href="services.html">Beard Trim</a>
+                    <a href="services.html">Shaving</a>
+                    <a href="services.html">Styling</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Subscribe for updates and offers.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-primary">GO</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
+                © 2024 BarberX. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Interactive Time Slots
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', () => {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
+                slot.classList.add('active');
+            });
+        });
+
+        // Simple form submission feedback
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Appointment request submitted! Check your upcoming visits.');
+        });
+    </script>
+</body>
+
+</html>
