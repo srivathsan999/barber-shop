@@ -80,3 +80,7 @@ body.dark-mode .form-control:focus {
     border-color: var(--accent);
     color: var(--text-primary);
 }
+
+body.dark-mode .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}

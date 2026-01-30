@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <style>
         .dashboard-container {
             padding-top: 100px;
@@ -116,38 +118,23 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
+                BARBER<span class="text-accent">X</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <div class="d-flex align-items-center gap-3 ms-lg-4">
-                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-primary"
-                            data-bs-toggle="dropdown">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=C19A6B&color=fff"
-                                alt="Avatar" class="rounded-circle me-2" width="32" height="32">
-                            <span class="d-none d-sm-inline">John Doe</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-cog me-2"></i> Settings</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="login.html"><i
-                                        class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
-                        </ul>
-                    </div>
+                <!-- Mobile Menu (Visible on Tablet/Mobile) -->
+                <div class="d-lg-none py-3 border-top mt-3">
+                    <a href="#" class="sidebar-link active"><i class="fas fa-calendar-check"></i> Appointments</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-history"></i> My History</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-gift"></i> Loyalty Rewards</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-user"></i> Profile Settings</a>
+                    <hr class="my-3 opacity-25">
+                    <a href="login.html" class="sidebar-link text-danger logout-link"><i
+                            class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </div>
         </div>
@@ -162,6 +149,9 @@
                     <a href="#" class="sidebar-link"><i class="fas fa-history"></i> My History</a>
                     <a href="#" class="sidebar-link"><i class="fas fa-gift"></i> Loyalty Rewards</a>
                     <a href="#" class="sidebar-link"><i class="fas fa-user"></i> Profile Settings</a>
+                    <hr class="my-3 opacity-25">
+                    <a href="login.html" class="sidebar-link text-danger logout-link"><i
+                            class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </div>
 
@@ -244,22 +234,36 @@
 
                     <!-- My Bookings -->
                     <div class="col-lg-5 fade-up" style="animation-delay: 0.4s">
-                        <h4 class="mb-4">MY UPCOMING APPOINTMENTS</h4>
-                        <div class="appointment-item">
-                            <div>
-                                <h6 class="mb-1">Classic Haircut</h6>
-                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Oct 24, 2024
-                                </p>
-                                <p class="small text-muted mb-0"><i class="far fa-clock me-1"></i> 11:30 AM</p>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">UPCOMING</h4>
+                            <span class="badge bg-primary rounded-pill" id="upcoming-count">1</span>
+                        </div>
+                        <div id="upcoming-list">
+                            <div class="appointment-item" id="appt-1">
+                                <div>
+                                    <h6 class="mb-1">Classic Haircut</h6>
+                                    <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Oct 24,
+                                        2026
+                                    </p>
+                                    <p class="small text-muted mb-0"><i class="far fa-clock me-1"></i> 11:30 AM</p>
+                                    <div class="mt-2">
+                                        <button
+                                            class="btn btn-sm btn-outline-primary me-2 py-1 px-3 reschedule-btn">Reschedule</button>
+                                        <button class="btn btn-sm btn-outline-danger py-1 px-3 cancel-btn"
+                                            data-id="appt-1">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="status-badge status-upcoming">Upcoming</span>
+                                </div>
                             </div>
-                            <span class="status-badge status-upcoming">Upcoming</span>
                         </div>
 
                         <h4 class="mb-4 mt-5">PAST VISITS</h4>
                         <div class="appointment-item opacity-75">
                             <div>
                                 <h6 class="mb-1">Beard Sculpting</h6>
-                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Sep 12, 2024
+                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Sep 12, 2025
                                 </p>
                             </div>
                             <span class="status-badge status-completed">Completed</span>
@@ -267,7 +271,7 @@
                         <div class="appointment-item opacity-75">
                             <div>
                                 <h6 class="mb-1">Classic Haircut</h6>
-                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Aug 05, 2024
+                                <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> Aug 05, 2025
                                 </p>
                             </div>
                             <span class="status-badge status-completed">Completed</span>
@@ -278,48 +282,7 @@
         </div>
     </div>
 
-    <!-- Footer (Standardized) -->
-    <footer class="mt-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
-                    <p class="text-muted">Premium grooming for the modern gentleman. Visit us for an experience, not
-                        just a haircut.</p>
-                    <div class="mt-4">
-                        <a href="#" class="d-inline-block me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="d-inline-block me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="d-inline-block"><i class="fab fa-twitter fa-lg"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Links</h5>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Services</h5>
-                    <a href="services.html">Haircuts</a>
-                    <a href="services.html">Beard Trim</a>
-                    <a href="services.html">Shaving</a>
-                    <a href="services.html">Styling</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5>Newsletter</h5>
-                    <p class="text-muted small">Subscribe for updates and offers.</p>
-                    <form class="d-flex gap-2">
-                        <input type="email" class="form-control" placeholder="Email Address">
-                        <button class="btn btn-primary">GO</button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
-                © 2024 BarberX. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -329,18 +292,149 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Interactive Time Slots
-        document.querySelectorAll('.time-slot').forEach(slot => {
-            slot.addEventListener('click', () => {
-                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('active'));
-                slot.classList.add('active');
-            });
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            let upcomingCount = 1;
 
-        // Simple form submission feedback
-        document.getElementById('booking-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Appointment request submitted! Check your upcoming visits.');
+            // Interactive Time Slots
+            const timeSlots = document.querySelectorAll('.time-slot');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', () => {
+                    timeSlots.forEach(s => {
+                        s.classList.remove('active');
+                        s.classList.remove('selected');
+                    });
+                    slot.classList.add('active');
+                    slot.classList.add('selected');
+                });
+            });
+
+            // Booking Form Submission
+            const bookingForm = document.getElementById('booking-form');
+            const upcomingList = document.getElementById('upcoming-list');
+            const countBadge = document.getElementById('upcoming-count');
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const service = bookingForm.querySelector('select').value;
+                const serviceName = bookingForm.querySelector('select').options[bookingForm.querySelector('select').selectedIndex].text.split(' - ')[0];
+                const date = bookingForm.querySelector('input[type="date"]').value;
+                const activeTimeSlot = document.querySelector('.time-slot.active');
+
+                if (!date || !activeTimeSlot) {
+                    alert('Please select both a date and a time slot.');
+                    return;
+                }
+
+                // Create new appointment item
+                upcomingCount++;
+                const apptId = `appt-${upcomingCount}`;
+                const newAppt = document.createElement('div');
+                newAppt.className = 'appointment-item fade-up';
+                newAppt.id = apptId;
+                newAppt.innerHTML = `
+                    <div>
+                        <h6 class="mb-1">${serviceName}</h6>
+                        <p class="small text-muted mb-0"><i class="far fa-calendar-alt me-1"></i> ${new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                        <p class="small text-muted mb-0"><i class="far fa-clock me-1"></i> ${activeTimeSlot.innerText}</p>
+                        <div class="mt-2">
+                            <button class="btn btn-sm btn-outline-primary me-2 py-1 px-3 reschedule-btn">Reschedule</button>
+                            <button class="btn btn-sm btn-outline-danger py-1 px-3 cancel-btn" data-id="${apptId}">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <span class="status-badge status-upcoming">Upcoming</span>
+                    </div>
+                `;
+
+                upcomingList.prepend(newAppt);
+                countBadge.innerText = upcomingCount;
+
+                // Reset form
+                bookingForm.reset();
+                timeSlots.forEach(s => s.classList.remove('active'));
+
+                alert('Success! Your appointment has been booked.');
+            });
+
+            // Handle Dynamic Buttons (Cancel/Reschedule)
+            upcomingList.addEventListener('click', (e) => {
+                const target = e.target;
+
+                if (target.classList.contains('cancel-btn')) {
+                    const id = target.getAttribute('data-id');
+                    if (confirm('Are you sure you want to cancel this appointment?')) {
+                        document.getElementById(id).style.opacity = '0';
+                        setTimeout(() => {
+                            document.getElementById(id).remove();
+                            upcomingCount--;
+                            countBadge.innerText = upcomingCount;
+                        }, 300);
+                    }
+                }
+
+                if (target.classList.contains('reschedule-btn')) {
+                    alert('Please select a new date and time from the booking form to reschedule.');
+                    document.querySelector('.booking-form-container').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+
+            // Mobile Menu Auto-Close Handler
+            const navbarCollapse = document.getElementById('navbarNav');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+
+            // Close mobile menu function
+            function closeMobileMenu() {
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                    if (navbarToggler) {
+                        navbarToggler.classList.add('collapsed');
+                        navbarToggler.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            }
+
+            // Add click handler to ALL mobile menu links
+            document.querySelectorAll('#navbarNav .sidebar-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Always close mobile menu when any link is clicked
+                    closeMobileMenu();
+
+                    // Then handle the link logic
+                    if (link.getAttribute('href') === '#' || !link.getAttribute('href')) {
+                        e.preventDefault();
+                        const feature = link.innerText.trim();
+                        alert(`${feature} feature coming soon!`);
+
+                        // Small UI update for sidebar
+                        document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Logout Confirmation (All instances)
+            document.querySelectorAll('.logout-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    closeMobileMenu(); // Close menu before showing confirmation
+                    if (!confirm('Are you sure you want to logout?')) {
+                        e.preventDefault();
+                    }
+                });
+            });
+
+            // Newsletter GO button
+            const newsletterForm = document.querySelector('footer form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const email = newsletterForm.querySelector('input').value;
+                    if (email) {
+                        alert('Thank you for subscribing! Check your email for a welcome gift.');
+                        newsletterForm.reset();
+                    }
+                });
+            }
         });
     </script>
 </body>

@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 
 <body>
@@ -32,7 +35,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
+                BARBER<span class="text-accent">X</span>
+            </a>
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,14 +56,15 @@
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3 ms-lg-4">
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
                         <i class="fas fa-moon"></i>
                     </button>
-                    <a href="login.html" class="nav-link p-0">Login</a>
-                    <a href="signup.html" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                    <a href="login.html" class="btn btn-outline-primary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -120,8 +127,8 @@
                         </div>
                         <h4>Haircuts</h4>
                         <p class="text-muted">Precision cuts tailored to your head shape and hair type.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Read More <i
-                                class="fas fa-arrow-right small"></i></a>
+                        <a href="service-details.html?id=haircut" class="text-accent text-decoration-none fw-bold">Read
+                            More <i class="fas fa-arrow-right small"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 fade-up">
@@ -131,8 +138,8 @@
                         </div>
                         <h4>Beard Trim</h4>
                         <p class="text-muted">Sculpting and shaping for the perfect beard profile.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Read More <i
-                                class="fas fa-arrow-right small"></i></a>
+                        <a href="service-details.html?id=beard" class="text-accent text-decoration-none fw-bold">Read
+                            More <i class="fas fa-arrow-right small"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 fade-up">
@@ -142,8 +149,172 @@
                         </div>
                         <h4>Hot Shave</h4>
                         <p class="text-muted">Traditional straight razor shave with hot towels and oils.</p>
-                        <a href="service-details.html" class="text-accent text-decoration-none fw-bold">Read More <i
-                                class="fas fa-arrow-right small"></i></a>
+                        <a href="service-details.html?id=shave" class="text-accent text-decoration-none fw-bold">Read
+                            More <i class="fas fa-arrow-right small"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container py-5">
+            <div class="section-title fade-up">
+                <span class="text-accent">TESTIMONIALS</span>
+                <h2 class="text-white">WHAT OUR CLIENTS SAY</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up">
+                    <div class="glass-card p-4 h-100 border-light border-opacity-10">
+                        <div class="text-accent mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-white-50 italic">"Best haircut I've had in years. The attention to detail is
+                            unmatched. Truly a premium experience from start to finish."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">James Wilson</h6>
+                                <small class="text-accent">Business Owner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 h-100 border-light border-opacity-10">
+                        <div class="text-accent mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-white-50 italic">"The hot towel shave is a game changer. I felt like a new
+                            man walking out. Highly recommend the Royal Shave service."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Marcus Chen</h6>
+                                <small class="text-accent">Creative Director</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 border-light border-opacity-10">
+                        <div class="text-accent mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4 text-white-50 italic">"Found my forever barber. The atmosphere is great, and the
+                            expertise of the staff is evident in every movement."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">David Miller</h6>
+                                <small class="text-accent">Pro Athlete</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Team -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="section-title fade-up">
+                <span>OUR EXPERTS</span>
+                <h2>MEET THE MASTER BARBERS</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 fade-up">
+                    <div class="card border-0 shadow-sm zoom-hover overflow-hidden rounded-0">
+                        <img src="assets/images/team/barber1.jpg" alt="Master Barber" class="card-img-top"
+                            style="height: 350px; object-fit: cover;">
+                        <div class="card-body text-center bg-white p-4">
+                            <h5 class="mb-1">ALEX RIVERA</h5>
+                            <p class="text-accent small mb-0">Founder & Master Barber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
+                    <div class="card border-0 shadow-sm zoom-hover overflow-hidden rounded-0">
+                        <img src="assets/images/team/barber2.jpg" alt="Master Barber" class="card-img-top"
+                            style="height: 350px; object-fit: cover;">
+                        <div class="card-body text-center bg-white p-4">
+                            <h5 class="mb-1">SAM KNIGHT</h5>
+                            <p class="text-accent small mb-0">Beard Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
+                    <div class="card border-0 shadow-sm zoom-hover overflow-hidden rounded-0">
+                        <img src="assets/images/hero/hero-2.jpg" alt="Master Barber" class="card-img-top"
+                            style="height: 350px; object-fit: cover;">
+                        <div class="card-body text-center bg-white p-4">
+                            <h5 class="mb-1">MARCO ROSSI</h5>
+                            <p class="text-accent small mb-0">Fade Expert</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
+                    <div class="card border-0 shadow-sm zoom-hover overflow-hidden rounded-0">
+                        <img src="assets/images/gallery/g1.jpg" alt="Master Barber" class="card-img-top"
+                            style="height: 350px; object-fit: cover;">
+                        <div class="card-body text-center bg-white p-4">
+                            <h5 class="mb-1">JULIAN COLE</h5>
+                            <p class="text-accent small mb-0">Senior Stylist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking App Promo -->
+    <section class="py-5 bg-light overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 fade-up">
+                    <div class="section-title text-start mb-4">
+                        <span>STAY CONNECTED</span>
+                        <h2>BOOK ON THE GO</h2>
+                    </div>
+                    <p class="lead text-muted mb-4">Download our mobile app to schedule appointments, track your
+                        grooming history, and get exclusive rewards every time you visit.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4 py-3">
+                            <i class="fab fa-apple fa-2x"></i>
+                            <div class="text-start">
+                                <small class="d-block lh-1">Download on the</small>
+                                <span class="h5 mb-0">App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-dark btn-lg d-flex align-items-center gap-2 px-4 py-3">
+                            <i class="fab fa-google-play fa-2x"></i>
+                            <div class="text-start">
+                                <small class="d-block lh-1">Get it on</small>
+                                <span class="h5 mb-0">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center fade-up">
+                    <div class="position-relative d-inline-block">
+                        <img src="assets/images/gallery/g2.jpg" alt="Mobile App"
+                            class="img-fluid rounded-4 shadow-lg rotate-hover" style="max-height: 500px;">
+                        <div
+                            class="position-absolute top-0 end-0 bg-accent text-white p-3 rounded-circle shadow-lg m-n3 d-none d-md-block">
+                            <h3 class="mb-0">5★</h3>
+                            <small>Rated</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,7 +326,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
+                    <h4 class="mb-4 d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.png" alt="Logo" style="height: 35px;">
+                        BARBER<span class="text-accent">X</span>
+                    </h4>
                     <p class="text-muted">Premium grooming for the modern gentleman. Visit us for an experience, not
                         just a haircut.</p>
                     <div class="mt-4">
@@ -188,7 +362,7 @@
                 </div>
             </div>
             <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
-                © 2024 BarberX. All Rights Reserved.
+                © 2026 BarberX. All Rights Reserved.
             </div>
         </div>
     </footer>

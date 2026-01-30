@@ -1,30 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle-btn');
 
     // Check local storage or preference
     const currentTheme = localStorage.getItem('theme');
 
+    const updateIcons = (isDark) => {
+        themeToggles.forEach(toggle => {
+            const icon = toggle.querySelector('i');
+            if (icon) {
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        });
+    };
+
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        if (icon) icon.className = 'fas fa-sun';
+        updateIcons(true);
     } else {
-        if (icon) icon.className = 'fas fa-moon';
+        updateIcons(false);
     }
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
             document.body.classList.toggle('dark-mode');
 
-            let theme = 'light';
-            if (document.body.classList.contains('dark-mode')) {
-                theme = 'dark';
-                if (icon) icon.className = 'fas fa-sun';
-            } else {
-                if (icon) icon.className = 'fas fa-moon';
-            }
+            const isDark = document.body.classList.contains('dark-mode');
+            const theme = isDark ? 'dark' : 'light';
 
+            updateIcons(isDark);
             localStorage.setItem('theme', theme);
         });
-    }
+    });
 });

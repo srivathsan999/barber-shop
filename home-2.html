@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
 
 <body>
@@ -23,7 +25,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
+                BARBER<span class="text-accent">X</span>
+            </a>
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,13 +46,14 @@
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3 ms-lg-4">
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
                             class="fas fa-moon"></i></button>
-                    <a href="login.html" class="nav-link p-0">Login</a>
-                    <a href="signup.html" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                    <a href="login.html" class="btn btn-outline-primary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -181,17 +187,142 @@
         </div>
     </section>
 
+    <!-- Our Process -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="section-title fade-up">
+                <span>OUR PROCESS</span>
+                <h2>HOW WE WORK</h2>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-4 fade-up">
+                    <div class="p-4 text-center">
+                        <div class="mb-4 d-inline-block position-relative">
+                            <span
+                                class="display-1 text-accent opacity-10 position-absolute top-50 start-50 translate-middle"
+                                style="z-index: 0;">01</span>
+                            <i class="fas fa-calendar-check fa-3x text-accent position-relative"
+                                style="z-index: 1;"></i>
+                        </div>
+                        <h5>ONLINE BOOKING</h5>
+                        <p class="text-muted small">Select your service and preferred barber through our easy online
+                            system.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="p-4 text-center">
+                        <div class="mb-4 d-inline-block position-relative">
+                            <span
+                                class="display-1 text-accent opacity-10 position-absolute top-50 start-50 translate-middle"
+                                style="z-index: 0;">02</span>
+                            <i class="fas fa-mug-hot fa-3x text-accent position-relative" style="z-index: 1;"></i>
+                        </div>
+                        <h5>RELAX & DRINK</h5>
+                        <p class="text-muted small">Arrive early, enjoy a complimentary drink and soak in the
+                            atmosphere.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="p-4 text-center">
+                        <div class="mb-4 d-inline-block position-relative">
+                            <span
+                                class="display-1 text-accent opacity-10 position-absolute top-50 start-50 translate-middle"
+                                style="z-index: 0;">03</span>
+                            <i class="fas fa-spray-can fa-3x text-accent position-relative" style="z-index: 1;"></i>
+                        </div>
+                        <h5>GET GROOMED</h5>
+                        <p class="text-muted small">Sit back while our master barbers transform your look with
+                            precision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Latest News -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div class="section-title text-start mb-0">
+                    <span>LATEST ARTICLES</span>
+                    <h2>GROOMING TIPS & NEWS</h2>
+                </div>
+                <a href="blog.html" class="btn btn-outline-primary">Read All News</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 fade-up">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <img src="assets/images/blog/blog1.jpg" class="card-img-top" alt="Blog 1"
+                            style="height: 240px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-accent text-white">STYLE</span>
+                                <small class="text-muted ms-2">Oct 12, 2024</small>
+                            </div>
+                            <h5 class="card-title">5 Tips for a Perfect Beard</h5>
+                            <p class="card-text text-muted small">Learn how to maintain your beard at home between
+                                visits to the shop.</p>
+                            <a href="blog-details.html?id=beard-tips"
+                                class="text-accent text-decoration-none fw-bold small">READ MORE
+                                <i class="fas fa-arrow-right small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.1s;">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <img src="assets/images/blog/blog2.jpg" class="card-img-top" alt="Blog 2"
+                            style="height: 240px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-accent text-white">TRENDS</span>
+                                <small class="text-muted ms-2">Oct 08, 2024</small>
+                            </div>
+                            <h5 class="card-title">Top Haircut Trends 2024</h5>
+                            <p class="card-text text-muted small">Discover the styles that are dominating the grooming
+                                world this year.</p>
+                            <a href="blog-details.html?id=trends-2024"
+                                class="text-accent text-decoration-none fw-bold small">READ MORE
+                                <i class="fas fa-arrow-right small"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 fade-up" style="transition-delay: 0.2s;">
+                    <div class="card border-0 shadow-sm overflow-hidden h-100">
+                        <img src="assets/images/hero/hero-2.jpg" class="card-img-top" alt="Blog 3"
+                            style="height: 240px; object-fit: cover;">
+                        <div class="card-body p-4">
+                            <div class="mb-2">
+                                <span class="badge bg-accent text-white">TIPS</span>
+                                <small class="text-muted ms-2">Sep 25, 2024</small>
+                            </div>
+                            <h5 class="card-title">Benefits of Hot Towels</h5>
+                            <p class="card-text text-muted small">Why you should treat yourself to a traditional shave
+                                experience.</p>
+                            <a href="blog-details.html?id=hot-towel-shave"
+                                class="text-accent text-decoration-none fw-bold small">READ MORE
+                                <i class="fas fa-arrow-right small"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
-                    <p class="text-muted">Premium grooming for the modern gentleman.</p>
+                    <h4 class="mb-4 d-flex align-items-center gap-2">
+                        <img src="assets/images/logo.png" alt="Logo" style="height: 35px;">
+                        BARBER<span class="text-accent">X</span>
+                    </h4>
+                    <p class="text-muted">Premium grooming for the modern gentleman. Visit us for an experience, not
+                        just a haircut.</p>
                     <div class="mt-4">
-                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="d-inline-block me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="d-inline-block me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="d-inline-block"><i class="fab fa-twitter fa-lg"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -205,9 +336,12 @@
                     <h5>Services</h5>
                     <a href="services.html">Haircuts</a>
                     <a href="services.html">Beard Trim</a>
+                    <a href="services.html">Shaving</a>
+                    <a href="services.html">Styling</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h5>Newsletter</h5>
+                    <p class="text-muted small">Subscribe for updates and offers.</p>
                     <form class="d-flex gap-2">
                         <input type="email" class="form-control" placeholder="Email Address">
                         <button class="btn btn-primary">GO</button>
@@ -215,7 +349,7 @@
                 </div>
             </div>
             <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
-                © 2024 BarberX. All Rights Reserved.
+                © 2026 BarberX. All Rights Reserved.
             </div>
         </div>
     </footer>

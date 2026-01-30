@@ -34,6 +34,15 @@ h6,
     color: var(--primary);
 }
 
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6 {
+    color: #FFFFFF !important;
+}
+
 /* Buttons */
 .btn-primary {
     background-color: var(--primary);
@@ -86,6 +95,14 @@ h6,
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
 }
 
 .nav-link {
@@ -181,6 +198,11 @@ img {
     height: auto;
 }
 
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
 /* Theme Toggle */
 .theme-toggle-btn {
     background: none;
@@ -189,4 +211,84 @@ img {
     font-size: 1.25rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+/* Social Buttons */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.btn-google {
+    background: #FFFFFF;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.btn-google:hover {
+    background: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #444;
+}
+
+.btn-facebook {
+    background: #1877F2;
+    color: #FFFFFF;
+    border: 1px solid #1877F2;
+}
+
+.btn-facebook:hover {
+    background: #166fe5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    font-size: 0.8rem;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Dark mode adjustments for social */
+.dark-mode .btn-google {
+    background: #2d2d2d;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-mode .btn-google:hover {
+    background: #3d3d3d;
+}
+
+.dark-mode .separator::before,
+.dark-mode .separator::after {
+    border-color: #444;
 }
