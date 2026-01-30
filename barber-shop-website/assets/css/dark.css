@@ -1,0 +1,82 @@
+body.dark-mode {
+    --primary: #F8FAFC;
+    --secondary: #CBD5E1;
+    --background: #020617;
+    --surface: #0B0F19;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(2, 6, 23, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: var(--accent);
+}
+
+body.dark-mode .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+body.dark-mode .btn-primary {
+    color: var(--background);
+}
+
+body.dark-mode .btn-primary:hover {
+    color: var(--background);
+}
+
+body.dark-mode .btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-primary);
+}
+
+body.dark-mode .text-muted {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .bg-light {
+    background-color: #0f172a !important;
+}
+
+body.dark-mode .card {
+    background-color: var(--surface);
+    border-color: var(--glass-border);
+}
+
+/* Form inputs in dark mode */
+body.dark-mode .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    color: var(--text-primary);
+}

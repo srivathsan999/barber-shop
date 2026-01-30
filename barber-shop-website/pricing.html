@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Barber Shop</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home Default</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home Variant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ms-lg-4">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
+                            class="fas fa-moon"></i></button>
+                    <a href="login.html" class="nav-link p-0">Login</a>
+                    <a href="signup.html" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="d-flex align-items-center justify-content-center text-white position-relative"
+        style="height: 300px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/hero/hero-1.jpg') center/cover;">
+        <div class="text-center z-1">
+            <h1 class="display-3 mb-0">PRICING</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0 mt-3 text-uppercase small"
+                    style="background: transparent;">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active text-accent" aria-current="page">Pricing</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Pricing Tables -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-center g-4">
+
+                <!-- Hair Menu -->
+                <div class="col-lg-5 fade-up">
+                    <div class="card border-0 glass-card p-4 h-100">
+                        <h3 class="mb-4 text-center">HAIR MENU</h3>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Classic Cut</h5>
+                                <small class="text-muted">Standard cut & style</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$35</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Skin Fade</h5>
+                                <small class="text-muted">Precision fade with foil shaver</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$40</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Clipper Cut</h5>
+                                <small class="text-muted">One guard all over</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$25</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Scissor Cut</h5>
+                                <small class="text-muted">Long hair styling</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$45</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beard Menu -->
+                <div class="col-lg-5 fade-up">
+                    <div class="card border-0 glass-card p-4 h-100">
+                        <h3 class="mb-4 text-center">BEARD & SHAVE</h3>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Beard Trim</h5>
+                                <small class="text-muted">Shape up & line up</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$25</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Hot Towel Shave</h5>
+                                <small class="text-muted">Traditional straight razor</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$40</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">Full Service</h5>
+                                <small class="text-muted">Haircut + Beard Trim</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$55</span>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3 border-secondary border-opacity-25">
+                            <div>
+                                <h5 class="mb-0">The Royal Treatment</h5>
+                                <small class="text-muted">Cut + Shave + Facial</small>
+                            </div>
+                            <span class="h5 text-accent mb-0">$80</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
+                    <p class="text-muted">Premium grooming for the modern gentleman.</p>
+                    <div class="mt-4">
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Services</h5>
+                    <a href="services.html">Haircuts</a>
+                    <a href="services.html">Beard Trim</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-primary">GO</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
+                © 2024 BarberX. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

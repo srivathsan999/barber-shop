@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | Barber Shop</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BARBER<span class="text-accent">X</span></a>
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home Default</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home Variant</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 ms-lg-4">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
+                            class="fas fa-moon"></i></button>
+                    <a href="login.html" class="nav-link p-0">Login</a>
+                    <a href="signup.html" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="d-flex align-items-center justify-content-center text-white position-relative"
+        style="height: 300px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/blog/blog1.jpg') center/cover;">
+        <div class="text-center z-1">
+            <h1 class="display-3 mb-0">BLOG DETAILS</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0 mt-3 text-uppercase small"
+                    style="background: transparent;">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="blog.html" class="text-white text-decoration-none">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item active text-accent" aria-current="page">Details</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-8 fade-up">
+                    <img src="assets/images/blog/blog1.jpg" alt="Beard Grooming"
+                        class="img-fluid rounded mb-4 w-100 object-fit-cover" style="max-height: 500px;">
+
+                    <div class="mb-4 text-muted small">
+                        <span class="me-3"><i class="fas fa-user text-accent me-1"></i> Admin</span>
+                        <span class="me-3"><i class="fas fa-calendar text-accent me-1"></i> Oct 12, 2024</span>
+                        <span><i class="fas fa-tag text-accent me-1"></i> Grooming</span>
+                    </div>
+
+                    <h2 class="mb-4">5 Tips for a Perfect Beard</h2>
+                    <p class="mb-4 text-muted">Growing a beard is a commitment, but maintaining it is an art. Whether
+                        you're a first-time grower or a bearded veteran, keeping your facial hair in top condition
+                        requires more than just letting it grow. Here are our top tips for beard perfection.</p>
+
+                    <h4 class="mb-3">1. Patience is Key</h4>
+                    <p class="text-muted mb-4">Don't rush the process. Let your beard grow for at least 4 weeks before
+                        attempting to shape it. This gives you enough volume to work with and helps identify patchy
+                        areas.</p>
+
+                    <h4 class="mb-3">2. Wash It Regularly</h4>
+                    <p class="text-muted mb-4">Just like the hair on your head, your beard needs to be cleaned. Use a
+                        specialized beard wash that won't strip away natural oils. Avoid regular bar soap which can dry
+                        out your skin.</p>
+
+                    <h4 class="mb-3">3. Use Beard Oil</h4>
+                    <p class="text-muted mb-4">Beard oil is essential for hydration. It softens the hair, reduces
+                        itchiness, and keeps the skin underneath healthy. Apply it daily after showering.</p>
+
+                    <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-warning my-5">
+                        <p class="mb-0 fst-italic">"A well-maintained beard is the sign of a gentleman who takes pride
+                            in his appearance."</p>
+                    </blockquote>
+
+                    <h4 class="mb-3">4. Trim Regularly</h4>
+                    <p class="text-muted mb-4">Even if you're growing it out, split ends need to go. Visit your barber
+                        every 3-4 weeks for a shape-up to keep it looking intentional, not messy.</p>
+
+                    <h4 class="mb-3">5. Brush It</h4>
+                    <p class="text-muted mb-4">Use a boar bristle brush to train the hairs to grow in the desired
+                        direction and to distribute oils evenly.</p>
+
+                </div>
+
+                <div class="col-lg-4 fade-up">
+                    <div class="bg-light p-4 rounded shadow-sm border sticky-top" style="top: 100px; z-index: 1;">
+                        <h5 class="mb-3">Recent Posts</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#" class="d-flex align-items-center text-decoration-none">
+                                    <img src="assets/images/blog/blog2.jpg" alt="" class="rounded object-fit-cover"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ms-3">
+                                        <h6 class="mb-1 text-dark">Top Trends 2024</h6>
+                                        <small class="text-muted">Oct 08, 2024</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="d-flex align-items-center text-decoration-none">
+                                    <img src="assets/images/hero/hero-2.jpg" alt="" class="rounded object-fit-cover"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ms-3">
+                                        <h6 class="mb-1 text-dark">Hot Towel Shaves</h6>
+                                        <small class="text-muted">Sep 25, 2024</small>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <h5 class="mb-3 mt-5">Categories</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="fas fa-angle-right text-accent me-2"></i> Grooming Tips</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="fas fa-angle-right text-accent me-2"></i> Trends</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="fas fa-angle-right text-accent me-2"></i> Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="mb-4">BARBER<span class="text-accent">X</span></h4>
+                    <p class="text-muted">Premium grooming for the modern gentleman.</p>
+                    <div class="mt-4">
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Links</h5>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Services</h5>
+                    <a href="services.html">Haircuts</a>
+                    <a href="services.html">Beard Trim</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-primary">GO</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted small">
+                © 2024 BarberX. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
