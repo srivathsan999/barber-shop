@@ -14,18 +14,43 @@ body.dark-mode .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+body.dark-mode .navbar-brand:hover,
+body.dark-mode .footer-brand:hover {
+    color: var(--primary) !important;
+    opacity: 0.8;
+}
+
 body.dark-mode .nav-link {
     color: var(--text-secondary);
 }
 
 body.dark-mode .nav-link:hover,
 body.dark-mode .nav-link.active {
+    color: var(--accent) !important;
+}
+
+body.dark-mode .nav-link.active {
+    background-color: rgba(193, 154, 107, 0.15);
+    /* Slightly more visible on dark */
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: var(--surface);
+    border-color: var(--glass-border);
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: rgba(193, 154, 107, 0.1);
     color: var(--accent);
 }
 
-body.dark-mode .glass-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+body.dark-mode .dropdown-item.active {
+    background-color: var(--accent) !important;
+    color: var(--primary) !important;
 }
 
 body.dark-mode .btn-primary {
@@ -59,8 +84,22 @@ body.dark-mode .text-muted {
     color: #94a3b8 !important;
 }
 
+/* Auth Page specific dark mode fixes */
+body.dark-mode .form-label {
+    color: var(--text-primary);
+}
+
+body.dark-mode .small.text-muted {
+    color: #cbd5e1 !important;
+    /* Brighter muted text for better contrast */
+}
+
 body.dark-mode .bg-light {
     background-color: #0f172a !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: var(--surface) !important;
 }
 
 body.dark-mode .card {
@@ -69,18 +108,78 @@ body.dark-mode .card {
 }
 
 /* Form inputs in dark mode */
-body.dark-mode .form-control {
+body.dark-mode .form-control,
+body.dark-mode .form-select {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
 }
 
-body.dark-mode .form-control:focus {
+body.dark-mode .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f8fafc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: var(--accent);
     color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(193, 154, 107, 0.25);
 }
 
 body.dark-mode .form-control::placeholder {
     color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .form-check-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+body.dark-mode .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(193, 154, 107, 0.25);
+    border-color: var(--accent);
+}
+
+/* Dashboard Fixes */
+body.dark-mode .appointment-item {
+    background-color: var(--surface) !important;
+    border-color: var(--accent);
+}
+
+/* Blog Pagination Fixes */
+body.dark-mode .page-link {
+    background-color: var(--surface);
+    border-color: var(--glass-border);
+    color: var(--text-primary);
+}
+
+body.dark-mode .page-link:hover {
+    background-color: var(--glass-bg);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+body.dark-mode .page-item.active .page-link {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #020617 !important;
+    /* Constant dark text for active state */
+}
+
+body.dark-mode .page-item.disabled .page-link {
+    background-color: var(--background);
+    border-color: var(--glass-border);
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+body.dark-mode option {
+    background-color: var(--surface);
+    color: var(--text-primary);
 }

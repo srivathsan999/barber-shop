@@ -113,11 +113,64 @@ h6,
     font-size: 0.9rem;
     letter-spacing: 0.05em;
     padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+    border-radius: 4px;
+    position: relative;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.33s ease;
+    transform-origin: center;
+}
+
+.nav-link:hover {
     color: var(--accent);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active {
+    color: var(--accent) !important;
+    background-color: rgba(193, 154, 107, 0.05);
+    /* Very subtle accent background */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(193, 154, 107, 0.05);
+    color: var(--accent);
+}
+
+.dropdown-item.active {
+    background-color: var(--accent) !important;
+    color: white !important;
 }
 
 /* Glassmorphism Cards */
@@ -127,7 +180,16 @@ h6,
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
-    /* Soft radius, not fully sharp */
+}
+
+/* Dark Section Glass Card Adjustments */
+.bg-primary .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-primary .glass-card p {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Footer */
@@ -136,6 +198,24 @@ footer {
     /* Always dark for footer */
     color: #F3F4F6;
     padding: 5rem 0 2rem;
+}
+
+.footer-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #FFFFFF !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
 }
 
 footer h4,

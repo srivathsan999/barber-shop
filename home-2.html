@@ -39,7 +39,7 @@
                             data-bs-toggle="dropdown">Home</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.html">Home Default</a></li>
-                            <li><a class="dropdown-item" href="home-2.html">Home Variant</a></li>
+                            <li><a class="dropdown-item active" href="home-2.html">Home Variant</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -60,16 +60,17 @@
     </nav>
 
     <!-- Hero Section Variant (Split) -->
-    <section class="d-flex align-items-center min-vh-100 position-relative p-0 overflow-hidden">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
+    <section class="min-vh-100 d-flex align-items-stretch p-0 overflow-hidden">
+        <div class="container-fluid p-0">
+            <div class="row g-0 min-vh-100">
+                <!-- Text Column -->
                 <div class="col-lg-6 d-flex align-items-center justify-content-center bg-light order-2 order-lg-1">
-                    <div class="p-5 fade-up" style="max-width: 600px;">
+                    <div class="px-4 px-md-5 py-5 fade-up" style="max-width: 600px; margin-top: 80px;">
                         <span class="text-accent h6 mb-3 d-block">PREMIUM GROOMING</span>
                         <h1 class="display-3 mb-4">DEFINITION OF <br> <span class="text-accent">STYLE</span></h1>
                         <p class="lead mb-5 text-muted">A modern barbershop with traditional values. We focus on
                             quality, service, and style.</p>
-                        <div class="d-flex gap-3">
+                        <div class="d-flex flex-wrap gap-3">
                             <a href="signup.html" class="btn btn-primary">Book Now</a>
                             <a href="services.html" class="btn btn-outline-primary">Services</a>
                         </div>
@@ -86,9 +87,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 p-0 h-100 order-1 order-lg-2 min-vh-50">
-                    <div
-                        style="background: url('assets/images/hero/hero-2.jpg') no-repeat center center/cover; height: 100%; min-height: 50vh;">
+                <!-- Image Column -->
+                <div class="col-lg-6 p-0 order-1 order-lg-2">
+                    <div class="h-100 w-100"
+                        style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/images/hero/hero-2.jpg') no-repeat center center/cover; min-height: 50vh;">
                     </div>
                 </div>
             </div>
@@ -313,10 +315,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-4 d-flex align-items-center gap-2">
-                        <img src="assets/images/logo.png" alt="Logo" style="height: 35px;">
+                    <a href="index.html" class="footer-brand mb-4">
+                        <img src="assets/images/logo.png" alt="Logo" class="footer-logo">
                         BARBER<span class="text-accent">X</span>
-                    </h4>
+                    </a>
                     <p class="text-muted">Premium grooming for the modern gentleman. Visit us for an experience, not
                         just a haircut.</p>
                     <div class="mt-4">
