@@ -14,6 +14,22 @@ body.dark-mode .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+body.dark-mode .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+body.dark-mode .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(193, 154, 107, 0.25);
+}
+
+body.dark-mode .navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(1) brightness(100%);
+}
+
 body.dark-mode .navbar-brand:hover,
 body.dark-mode .footer-brand:hover {
     color: var(--primary) !important;
@@ -182,4 +198,26 @@ body.dark-mode .page-item.disabled .page-link {
 body.dark-mode option {
     background-color: var(--surface);
     color: var(--text-primary);
+}
+
+/* Footer Dark Mode Overrides */
+body.dark-mode footer {
+    background-color: #0B0F19;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .footer-brand {
+    color: #FFFFFF !important;
+}
+
+body.dark-mode footer a {
+    color: var(--text-secondary);
+}
+
+body.dark-mode footer .text-muted {
+    color: #64748b !important;
+}
+
+body.dark-mode footer .border-secondary {
+    border-color: rgba(255, 255, 255, 0.05) !important;
 }
