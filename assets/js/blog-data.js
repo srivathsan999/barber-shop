@@ -79,6 +79,84 @@ const blogData = {
             <h4 class="mb-3">4. Pure Relaxation</h4>
             <p class="text-muted mb-4">In a busy world, the 30-45 minutes spent in a barber chair with a hot towel on your face is a rare moment of peace and self-care.</p>
         `
+    },
+    'skincare-routine': {
+        title: 'Ultimate Men\'s Skincare Routine',
+        date: 'Sep 15, 2024',
+        category: 'Lifestyle',
+        image: 'assets/images/gallery/g1.jpg',
+        author: 'Marco Rossi',
+        content: `
+            <p class="mb-4 text-muted">Good grooming doesn't stop at your hairline. A consistent skincare routine is the foundation of a healthy, youthful appearance. Here's how to build a routine that actually works.</p>
+            
+            <h4 class="mb-3">1. Know Your Skin Type</h4>
+            <p class="text-muted mb-4">Whether your skin is oily, dry, or sensitive determines the products you should use. Using the wrong products can often do more harm than good.</p>
+            
+            <h4 class="mb-3">2. Cleanse Twice Daily</h4>
+            <p class="text-muted mb-4">Wash your face every morning and before bed to remove dirt, oil, and pollutants. A dedicated face wash is much better for your skin than regular body soap.</p>
+            
+            <h4 class="mb-3">3. Moisturize is Non-Negotiable</h4>
+            <p class="text-muted mb-4">Moisturizing keeps your skin hydrated and protected. Even if you have oily skin, a lightweight moisturizer is essential for maintaining balance.</p>
+            
+            <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-warning my-5">
+                <p class="mb-0 fst-italic">"Your skin is your best accessory. Take care of it and it will take care of you."</p>
+            </blockquote>
+            
+            <h4 class="mb-3">4. Don't Forget SPF</h4>
+            <p class="text-muted mb-4">Sun damage is the leading cause of premature aging. Apply a daily moisturizer with SPF 30 or higher, even on cloudy days.</p>
+        `
+    },
+    'hair-products-guide': {
+        title: 'Choosing the Right Hair Products',
+        date: 'Sep 05, 2024',
+        category: 'Grooming',
+        image: 'assets/images/gallery/g2.jpg',
+        author: 'Julian Cole',
+        content: `
+            <p class="mb-4 text-muted">Pomade, wax, clay, or gel? The sheer variety of hair products can be overwhelming. Each has a specific purpose and finish that can dramatically change your look.</p>
+            
+            <h4 class="mb-3">1. Pomade for Shine</h4>
+            <p class="text-muted mb-4">Perfect for classic, slicked-back styles. Pomades offer a high-shine finish and a flexible hold that can be restyled throughout the day.</p>
+            
+            <h4 class="mb-3">2. Clay for Texture</h4>
+            <p class="text-muted mb-4">If you prefer a natural, matte look with lots of volume, clay is your best friend. It provides a strong hold without the greasy feel.</p>
+            
+            <h4 class="mb-3">3. Wax for Definition</h4>
+            <p class="text-muted mb-4">Best for shorter, textured cuts. Wax adds definition and shine while allowing for a more manageable, reworkable style.</p>
+            
+            <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-warning my-5">
+                <p class="mb-0 fst-italic">"The right product transforms a good haircut into a great style."</p>
+            </blockquote>
+            
+            <h4 class="mb-3">4. Gel for Maximum Hold</h4>
+            <p class="text-muted mb-4">For styles that need to stay exactly in place all day. Modern gels are improved to avoid the "crunchy" feel of the past.</p>
+        `
+    },
+    'post-shave-care': {
+        title: 'Essential Post-Shave Care',
+        date: 'Aug 20, 2024',
+        category: 'Services',
+        image: 'assets/images/services/shave.jpg',
+        author: 'Sam Knight',
+        content: `
+            <p class="mb-4 text-muted">The shave itself is only half the battle. What you do after the blade leaves your skin is what determines whether you'll face irritation or a smooth finish.</p>
+            
+            <h4 class="mb-3">1. Rinse with Cold Water</h4>
+            <p class="text-muted mb-4">Immediately after shaving, rinse your face with cold water. This helps close the pores and soothes the skin from the razor's heat.</p>
+            
+            <h4 class="mb-3">2. Pat Dry, Don't Rub</h4>
+            <p class="text-muted mb-4">Your skin is sensitized after a shave. Use a clean, soft towel and gently pat it dry. Rubbing can cause micro-tears and lead to razor burn.</p>
+            
+            <h4 class="mb-3">3. Apply Aftershave Balm</h4>
+            <p class="text-muted mb-4">Unlike old-school alcohol splashes, modern balms are designed to hydrate and heal. They contain ingredients like aloe and shea butter to calm inflammation.</p>
+            
+            <blockquote class="blockquote bg-light p-4 rounded border-start border-4 border-warning my-5">
+                <p class="mb-0 fst-italic">"Smooth skin is the mark of a meticulous man."</p>
+            </blockquote>
+            
+            <h4 class="mb-3">4. Look for Niacinamide</h4>
+            <p class="text-muted mb-4">This powerful ingredient helps reduce redness and prevents ingrown hairs, keeping your neck area clear and comfortable.</p>
+        `
     }
 };
 

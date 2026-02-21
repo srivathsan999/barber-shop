@@ -23,7 +23,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
@@ -48,7 +48,7 @@
                     <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <div class="d-flex align-items-center gap-3 ms-lg-4">
+                <div class="d-flex align-items-center gap-3 ms-xl-4">
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
                             class="fas fa-moon"></i></button>
                     <a href="login.html" class="btn btn-outline-primary">Login</a>
@@ -59,7 +59,7 @@
     </nav>
 
     <!-- Header -->
-    <section class="d-flex align-items-center justify-content-center text-white position-relative"
+    <section class="sub-page-hero d-flex align-items-center justify-content-center text-white position-relative"
         style="height: 300px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/gallery/g1.jpg') center/cover;">
         <div class="text-center z-1">
             <h1 class="display-3 mb-0">OUR WORK</h1>
@@ -79,39 +79,63 @@
         <div class="container py-5">
             <div class="row g-4">
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/gallery/g1.jpg" alt="Gallery Image 1"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/gallery/g1.jpg" alt="Classic Pompadour"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Classic Pompadour</h5>
+                            <p>A timeless style with a modern, sharp finish.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/gallery/g2.jpg" alt="Gallery Image 2"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/gallery/g2.jpg" alt="Precision Fade"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Precision Fade</h5>
+                            <p>Hand-crafted tapers for a clean, professional look.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/gallery/g3.jpg" alt="Gallery Image 3"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/gallery/g3.jpg" alt="Beard Sculpting"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Beard Sculpting</h5>
+                            <p>Expert shaping to complement your facial features.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/hero/hero-1.jpg" alt="Gallery Image 4"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/hero/hero-1.jpg" alt="Royal Treatment"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Royal Treatment</h5>
+                            <p>Our premium full-service grooming experience.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/hero/hero-2.jpg" alt="Gallery Image 5"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/hero/hero-2.jpg" alt="Master Craftsmanship"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Master Craftsmanship</h5>
+                            <p>Attention to detail in every single snip.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 fade-up">
-                    <div class="zoom-hover h-100 shadow-sm">
-                        <img src="assets/images/services/shave.jpg" alt="Gallery Image 6"
+                    <div class="gallery-item h-100 shadow-sm rounded">
+                        <img src="assets/images/services/shave.jpg" alt="Traditional Shave"
                             class="img-fluid w-100 h-100 object-fit-cover" style="min-height: 300px;">
+                        <div class="gallery-overlay">
+                            <h5>Traditional Shave</h5>
+                            <p>Experience the ritual of a hot towel straight razor shave.</p>
+                        </div>
                     </div>
                 </div>
             </div>
