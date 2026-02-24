@@ -221,3 +221,32 @@ body.dark-mode footer .text-muted {
 body.dark-mode footer .border-secondary {
     border-color: rgba(255, 255, 255, 0.05) !important;
 }
+
+/* Social Buttons Dark Mode */
+body.dark-mode .btn-google {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-color: var(--glass-border);
+}
+
+body.dark-mode .btn-google:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+}
+
+body.dark-mode .btn-facebook {
+    background: var(--primary);
+    color: var(--background) !important;
+    border-color: var(--primary);
+}
+
+body.dark-mode .btn-facebook:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--background) !important;
+}
+
+body.dark-mode .separator::before,
+body.dark-mode .separator::after {
+    border-color: rgba(255, 255, 255, 0.1);
+}

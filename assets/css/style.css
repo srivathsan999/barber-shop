@@ -157,7 +157,55 @@ a.text-accent:hover {
     /* Very subtle accent background */
 }
 
-/* Dropdown Menu */
+
+
+/* Navbar Responsiveness for Mobile/Tablet */
+@media (max-width: 1199.98px) {
+    .navbar-collapse {
+        padding: 1.5rem 0;
+    }
+
+    .navbar-nav {
+        margin-bottom: 1.5rem;
+    }
+
+    .navbar-collapse .d-flex {
+        justify-content: center !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Navbar Responsiveness for 1366px-1400px */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .navbar .nav-link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+        gap: 5px;
+    }
+
+    .navbar-collapse .gap-3 {
+        gap: 0.4rem !important;
+    }
+
+    .navbar-collapse .ms-xl-4 {
+        margin-left: 0.75rem !important;
+    }
+
+    .navbar .btn-outline-primary,
+    .navbar .btn-primary {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
 .dropdown-menu {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -375,16 +423,7 @@ img {
     margin-left: .5em;
 }
 
-/* Dark mode adjustments for social */
-.dark-mode .btn-google {
-    background: #2d2d2d;
-    color: #fff;
-    border-color: #444;
-}
 
-.dark-mode .btn-google:hover {
-    background: #3d3d3d;
-}
 
 /* Gallery Hover Overlay */
 .gallery-item {
@@ -425,9 +464,4 @@ img {
     color: #FFFFFF;
     font-size: 0.9rem;
     margin-bottom: 0;
-}
-
-.dark-mode .separator::before,
-.dark-mode .separator::after {
-    border-color: #444;
 }
